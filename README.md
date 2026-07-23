@@ -29,7 +29,7 @@ Java-Console-Calculator/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Java-Console-Calculator.git
+   git clone https://github.com/swamini10/Java-Console-Calculator.git
    ```
 
 2. Navigate to the project folder:
@@ -83,6 +83,6 @@ Do you want to perform another calculation? (Y/N): Y
 - Calculation history
 
 ## Author
-**Your Name**
+**Swamini Bhandare**
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/swamini10
