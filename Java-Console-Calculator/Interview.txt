@@ -1,0 +1,97 @@
+1. What is Method Overloading?
+Answer:
+Method overloading is a feature in Java where multiple methods in the same class have the same name but different parameter lists (different number, type, or order of parameters).
+Example:
+public static int add(int a, int b) {
+    return a + b;}
+public static double add(double a, double b) {
+    return a + b;}
+
+
+2. How do you handle divide-by-zero?
+Answer:
+Before performing division, check whether the divisor is zero. If it is, display an error message instead of dividing.
+Example:
+if (num2 == 0) {
+    System.out.println("Division by zero is not allowed.");
+} else {
+    System.out.println(num1 / num2);}
+
+
+3. Difference between == and .equals()?
+==	.equals()
+Compares primitive values or object references	Compares the actual contents of objects
+Used with primitives and references	Mainly used with objects like String
+Example:
+String s1 = "Java";
+String s2 = new String("Java");
+System.out.println(s1 == s2);       // false
+System.out.println(s1.equals(s2));  // true
+
+
+4. What are the basic data types in Java?
+Answer:
+Java has 8 primitive data types:
+byte
+short
+int
+long
+float
+double
+char
+boolean
+
+
+5. How is Scanner used for input?
+Answer:
+The Scanner class is used to read user input from the keyboard.
+Example:
+Scanner sc = new Scanner(System.in);
+int age = sc.nextInt();
+String name = sc.next();
+double salary = sc.nextDouble();
+sc.close();
+
+
+6. Explain the role of a loop.
+Answer:
+A loop is used to execute a block of code repeatedly until a specified condition becomes false. It reduces code repetition and improves efficiency.
+Example:
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);}
+
+
+7. Difference between while and for loop?
+for Loop	while Loop
+Used when the number of iterations is known	Used when the number of iterations is unknown
+Initialization, condition, and update are written together	Initialization and update are written separately
+More compact	More flexible for condition-based loops
+Example:
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+
+
+8. What is the JVM?
+Answer:
+JVM (Java Virtual Machine) is a part of the Java Runtime Environment (JRE) that executes Java bytecode. It enables Java programs to run on different operating systems.
+
+
+9. How is Java platform-independent?
+Answer:
+Java source code is compiled into bytecode, which can run on any operating system that has a JVM. This is why Java follows the principle "Write Once, Run Anywhere (WORA)."
+
+
+10. How do you debug a Java program?
+Answer:
+A Java program can be debugged by:
+Reading error messages carefully.
+Using System.out.println() to check variable values.
+Using breakpoints in an IDE like VS Code or IntelliJ IDEA.
+Stepping through the code line by line.
+Checking logic and variable values during execution.
