@@ -21,7 +21,7 @@ This is a simple Java Console Calculator developed as a beginner-level project. 
 ## Project Structure
 ```
 Java-Console-Calculator/
-│── Calculator.java
+│└── Calculator.java
 └── README.md
 ```
 
