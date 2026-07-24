@@ -21,7 +21,7 @@ This is a simple Java Console Calculator developed as a beginner-level project. 
 ## Project Structure
 ```
 Java-Console-Calculator/
-│── Calculator.java
+│└── Calculator.java
 └── README.md
 ```
 
@@ -29,7 +29,7 @@ Java-Console-Calculator/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/swamini10/Java-Console-Calculator.git
+   git clone https://github.com/swamini10/Task
    ```
 
 2. Navigate to the project folder:
