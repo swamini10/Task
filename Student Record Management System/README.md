@@ -119,7 +119,7 @@ Searches and displays a student's details using their ID.
 ### Compile
 
 ```bash
-javac Student.java StudentManagementSystem.java
+javac StudentManagementSystem.java
 ```
 
 ### Run
