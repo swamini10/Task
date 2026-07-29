@@ -1,0 +1,186 @@
+1. What is Abstraction?
+
+Definition:
+Abstraction means showing only important details and hiding the internal implementation.
+
+Example:
+When you drive a car, you use the steering wheel, brake, and accelerator. You don't need to know how the engine works.
+
+Java:
+Achieved using Abstract Class and Interface.
+
+Memory Trick:
+
+Show what is needed, hide how it works.
+
+2. Difference between Interface and Abstract Class
+Interface	Abstract Class
+Uses interface keyword	Uses abstract class
+Supports multiple inheritance	Supports single inheritance
+Variables are public static final	Can have normal instance variables
+Class uses implements	Class uses extends
+
+Memory Trick:
+
+Interface = What to do
+Abstract Class = What + Some implementation
+
+3. Explain Polymorphism with Example
+
+Definition:
+Polymorphism means one thing can have many forms.
+
+Example
+class Animal {
+    void sound() {
+        System.out.println("Animal Sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+
+Here, the sound() method behaves differently for different objects.
+
+Memory Trick:
+
+One method, many behaviors.
+
+4. What is Method Overriding?
+
+Definition:
+Method overriding means a child class provides its own implementation of a parent class method.
+
+Example
+class Animal {
+    void sound() {
+        System.out.println("Animal Sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+
+Memory Trick:
+
+Same method, different implementation.
+
+5. Explain "IS-A" vs "HAS-A" Relationship
+IS-A (Inheritance)
+
+A Dog is an Animal.
+
+class Animal { }
+
+class Dog extends Animal { }
+HAS-A (Composition)
+
+A Car has an Engine.
+
+class Engine { }
+
+class Car {
+    Engine e = new Engine();
+}
+
+Memory Trick:
+
+IS-A → extends
+HAS-A → contains object
+6. Why use Inheritance?
+
+Inheritance lets one class reuse the properties and methods of another class, reducing duplicate code.
+
+Example
+class Animal {
+    void eat() { }
+}
+
+class Dog extends Animal { }
+
+Memory Trick:
+
+Reuse code and avoid repetition.
+
+7. What is Dynamic Binding?
+
+Dynamic Binding means the method to execute is decided at runtime, based on the actual object.
+
+Example
+Animal a = new Dog();
+a.sound();
+
+Output:
+
+Bark
+
+Memory Trick:
+
+Method is selected at runtime.
+
+8. What is Constructor Chaining?
+
+Constructor Chaining means one constructor calls another constructor.
+
+Same class
+this();
+Parent class
+super();
+
+Memory Trick:
+
+Constructor calling another constructor.
+
+9. How to Implement Encapsulation?
+Make variables private.
+Access them using getter and setter methods.
+Example
+class Student {
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+Memory Trick:
+
+Private data + Getter/Setter = Encapsulation
+
+10. Explain super Keyword
+
+The super keyword refers to the parent class.
+
+It is used to:
+
+Call the parent class constructor → super()
+Call the parent class method → super.method()
+Access the parent class variable → super.variable
+Example
+class Animal {
+    void sound() {
+        System.out.println("Animal Sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        super.sound();
+        System.out.println("Bark");
+    }
+}
+
+Memory Trick:
+
+super = Parent class
