@@ -1,0 +1,186 @@
+1. Difference between FileReader and BufferedReader?
+FileReader
+Reads one character at a time.
+Slower for large files.
+BufferedReader
+Reads one line at a time using a buffer.
+Faster and more efficient.
+Example
+FileReader fr = new FileReader("notes.txt");
+BufferedReader br = new BufferedReader(fr);
+Memory Trick
+
+FileReader = Character
+BufferedReader = Line + Faster
+
+2. What is try-with-resources?
+
+Definition:
+It automatically closes files or other resources after use.
+
+Example
+try (FileReader fr = new FileReader("notes.txt")) {
+    // read file
+}
+
+No need to write:
+
+fr.close();
+Memory Trick
+
+Automatically closes resources.
+
+3. How to handle IOException?
+
+Use a try-catch block.
+
+Example
+try {
+    FileReader fr = new FileReader("notes.txt");
+} catch (IOException e) {
+    System.out.println(e.getMessage());
+}
+Memory Trick
+
+Try risky code, catch the exception.
+
+4. What are Checked and Unchecked Exceptions?
+Checked Exception
+Checked at compile time.
+Must be handled using try-catch or throws.
+
+Examples:
+
+IOException
+SQLException
+Unchecked Exception
+Occurs at runtime.
+Handling is optional.
+
+Examples:
+
+NullPointerException
+ArithmeticException
+ArrayIndexOutOfBoundsException
+Memory Trick
+
+Checked → Compile Time
+
+Unchecked → Run Time
+
+5. How does file writing work in Java?
+
+Use FileWriter.
+
+Example
+FileWriter writer = new FileWriter("notes.txt");
+writer.write("Hello Java");
+writer.close();
+Steps
+Create FileWriter
+Write data
+Close the file
+Memory Trick
+
+Open → Write → Close
+
+6. Difference between Append and Overwrite Mode?
+Overwrite
+FileWriter fw = new FileWriter("notes.txt");
+
+Old data is deleted and replaced.
+
+Append
+FileWriter fw = new FileWriter("notes.txt", true);
+
+New data is added at the end.
+
+Memory Trick
+
+Append = Add
+
+Overwrite = Replace
+
+7. What is Exception Propagation?
+
+When a method does not handle an exception, it is passed to the calling method.
+
+Example
+void method1() throws IOException {
+    method2();
+}
+Memory Trick
+
+Exception travels to the caller.
+
+8. How to log exceptions?
+
+Use:
+
+e.printStackTrace();
+
+or
+
+System.out.println(e.getMessage());
+Example
+catch(IOException e){
+    e.printStackTrace();
+}
+Memory Trick
+
+printStackTrace() = Full error
+
+getMessage() = Error message only
+
+9. What is a Stack Trace?
+
+A stack trace shows:
+
+Exception type
+Error message
+Line number where the error occurred
+Method call sequence
+Example
+Exception in thread "main"
+java.lang.ArithmeticException: / by zero
+at Main.main(Main.java:10)
+Memory Trick
+
+Stack Trace = Error + Line Number + Call Path
+
+10. When to use finally block?
+
+The finally block always executes, whether an exception occurs or not.
+
+It is commonly used to:
+
+Close files
+Close database connections
+Release resources
+Example
+try {
+    // code
+} catch(Exception e) {
+    System.out.println(e);
+} finally {
+    System.out.println("File Closed");
+}
+Memory Trick
+
+Finally = Always executes.
+
+🔥 10-Second Revision
+Question	Easy Answer
+FileReader	Reads character by character
+BufferedReader	Reads line by line, faster
+try-with-resources	Automatically closes resources
+IOException	Handle using try-catch
+Checked Exception	Compile-time, must handle
+Unchecked Exception	Runtime, optional to handle
+FileWriter	Open → Write → Close
+Append	Add data to existing file
+Overwrite	Replace existing file data
+Exception Propagation	Exception passes to caller
+Log Exception	printStackTrace() or getMessage()
+Stack Trace	Shows error, line number, and call path
+Finally	Always executes; used for cleanup
